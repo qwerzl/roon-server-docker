@@ -22,6 +22,9 @@ if [ ${retval} != 0 ]; then
   exit ${retval}
 fi
 
+echo Setting address...
+ip address add 89.58.63.150/24 dev eth0
+
 # start Roon
 #
 # since we're invoking from a script, we need to
