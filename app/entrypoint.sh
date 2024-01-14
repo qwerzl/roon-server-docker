@@ -23,7 +23,7 @@ if [ ${retval} != 0 ]; then
 fi
 
 echo Setting address...
-ip address add 89.58.63.150/24 dev eth0
+ip address add 8.8.8.8/24 dev eth0
 
 # start Roon
 #
