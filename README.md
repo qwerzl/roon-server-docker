@@ -1,6 +1,10 @@
 # Roon Sever in Docker
 Roon Server in a docker container.
 
+What this fork basically does is to add an ip to the container so that roon would broadcast its service to that ip. Room seems to broadcast its service only on the first ip shown in `ip a`. 
+
+Definitely not a good idea, but it works. Before building, change the `8.8.8.8` in `app/entrypoint.sh` to your own ip.
+
 ### Features
 - Downloads and installs latest Roon Server on first container start
 - Subsequent in-app Roon Server upgrades persist
