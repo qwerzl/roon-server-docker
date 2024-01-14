@@ -41,6 +41,7 @@ RUN apt-get install --no-install-recommends -y -q curl
 RUN apt-get install --no-install-recommends -y -q wget
 RUN apt-get install --no-install-recommends -y -q bzip2
 RUN apt-get install --no-install-recommends -y -q tzdata
+RUN apt-get install --no-install-recommends -y -q iproute2
 
 # apt cleanup
 RUN apt-get autoremove -y -q
@@ -64,12 +65,6 @@ EXPOSE 9100/tcp
 EXPOSE 9100-9200/tcp
 #  - Roon events from cloud to core (websocket?)
 EXPOSE 9200/tcp
-# Chromecast devices
-EXPOSE 30000-30010/tcp
-
-# See https://github.com/elgeeko1/roon-server-docker/issues/5
-# https://community.roonlabs.com/t/what-are-the-new-ports-that-roon-server-needs-open-in-the-firewall/186023/16
-EXPOSE 9330-9339/tcp
 
 # ports experimentally determined; or, documented
 # somewhere and source forgotten; or, commented
